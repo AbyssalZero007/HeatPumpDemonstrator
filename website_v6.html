@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYSDEC Five Rivers Heat Pump Demonstrator</title>
+    <style type="text/css">
+        @import url(./styles_v6.css);
+    </style>
+    <!--All voiceover recording courtesy of https://ttsmp3.com/ai using the Shimmer AI voice model-->
+    <script>
+        function Play(element){
+            let toggle = document.getElementById("audioOnOff");
+            if (toggle.checked == true){
+                let clip = document.getElementById(element);
+                clip.play();
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>NYSDEC Five Rivers Heat Pump Demonstrator</h1>
+        <img class="logo" src="./images/2010s_New_York_State_DEC_logo.png" alt="New York State Department of Environmental Conservation Logo">
+    </header>
+
+    <!-- Here is a mock translation menu that doesn't actually work, see JS code in next div
+    <div class="language-selection">
+        <label><b>Text Language:</b></label>
+        <label for="english">English</label>
+        <input type="radio" id="english" name="language" value="english" checked>
+        <label for="chinese">Chinese</label>
+        <input type="radio" id="chinese" name="language" value="chinese">
+        <label for="french">French</label>
+        <input type="radio" id="french" name="language" value="french">
+        <label for="ukrainian">Ukrainian</label>
+        <input type="radio" id="ukrainian" name="language" value="ukrainian">
+        <label for="other">Other</label>
+        <input type="radio" id="other" name="language" value="other">
+        <select>
+            <option value="spanish">Spanish</option>
+            <option value="russian">Russian</option>
+            <option value="irish">Irish</option>
+            <option value="vietnamese">Vietnamese</option>
+        </select>
+    </div>
+    -->
+    <div class="content">
+        <!-- 
+        /* If this website were hosted online, this would use Google translate to translate the webpage
+        to any language that Google Translate knows, which for all intents and purposes is all of them */
+        <div id="google_translate_element">
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');                }
+                </script>
+                
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </div>
+        -->
+        <h2 onclick="Play('titleAudio')">Heat Pumps: What are they and what can they do for you?</h2>
+        <audio id="titleAudio"><source src="./voiceovers/titleAudio.mp3" type="audio/mpeg"></audio>
+        <div class="info-board">
+            <div class="col">
+                <div onclick="Play('enviroBenefits')">
+                    <p class="poster-text-title">Environmental Benefits:</p>
+                    <p class="poster-text">Heat pumps are good for the environment because they don’t burn fuel like oil or gas furnaces. Instead, they move heat around using electricity, which means they produce less pollution and use energy more efficiently. Since heat pumps can use renewable energy like solar or wind to run, they help reduce carbon emissions, which is great for fighting climate change.</p>
+                    <audio id="enviroBenefits"><source src="./voiceovers/EnvironmentalBenefits.mp3" type="audio/mpeg"></audio>
+                </div>
+                <img class="placeholder" src="./images/CarbonFootprintGraph.png" alt="placeholder">
+                <div onclick="Play('costBenefits')">
+                    <p class="poster-text-title">Cost-Saving Benefits:</p>
+                    <p class="poster-text">Using a heat pump can save a lot of money. Since they use less electricity than other heating systems, they help reduce your energy bills. Plus, you get both heating and cooling in one system, so you don’t need to buy separate units for your home.</p>
+                    <audio id="costBenefits"><source src="./voiceovers/CostSavingsBenefits.mp3" type="audio/mpeg"></audio>
+                </div>
+                <img class="placeholder" src="./images/HeatingCostGraph.png" alt="Heating cost benefits of a heat pump graph">
+            </div>
+            <div class="middle">
+                <div class="row-container">
+                    <div onclick="Play('outdoorCoil');" class="middle-col">
+                        <p class="poster-text-title">Outdoor Coil<br>(Condenser in Heating Mode / Evaporator in Cooling Mode):</p>
+                        <p class="poster-text">This is the coil outside the house. In <b>winter</b>, it acts as an <i>evaporator</i>, collecting heat from the outside air, even if it’s cold, and transferring it inside. During <b>summer</b>, it becomes a <i>condenser</i>, releasing the heat it removed from inside the home to the outside air.</p>
+                        <img class="placeholder" src="./images/OutdoorCoil.png" alt="Outdoor coil image">
+                        <audio id="outdoorCoil"><source src="./voiceovers/OutdoorCoil.mp3" type="audio/mpeg"></audio>
+                    </div>
+                    <div onclick="Play('compressor')" class="middle-col">
+                        <p class="poster-text-title">Compressor:</p>
+                        <p class="poster-text">The compressor drives the heat pump by pushing refrigerant through the system. It compresses the refrigerant, making it extremely hot and allowing it to transfer heat from one place to another.</p>
+                        <img class="placeholder" src="./images/Compressor.png" alt="Compressor image">
+                        <audio id="compressor"><source src="./voiceovers/Compressor.mp3" type="audio/mpeg"></audio>
+                    </div>
+                    <div onclick="Play('reversingValve')" class="middle-col">
+                        <p class="poster-text-title">Reversing Valve:</p>
+                        <p class="poster-text">This valve is like a switch. It allows the heat pump to work both ways. In the winter, it brings heat into your home, and in the summer, it takes heat out, just like an air conditioner. The mechanism behind this reversing valve can be seen in this image shown above.</p>
+                        <img class="placeholder" src="./images/ReversingValve.png" alt="Reversing Valve Picture">
+                        <audio id="reversingValve"><source src="./voiceovers/ReversingValve.mp3" type="audio/mpeg"></audio>
+                    </div>
+                </div>
+                <div class="row-container">
+                    <div onclick="Play('expansionValve')" class="middle-col">
+                        <p class="poster-text-title">Expansion Valve:</p>
+                        <p class="poster-text">After the refrigerant is heated by the compressor, it travels through the expansion valve. Here, the refrigerant expands. This expansion causes the refrigerant to cool significantly so it can absorb more heat.</p>
+                        <img class="placeholder" src="./images/ExpansionValve.png" alt="Expansion valve image">
+                        <audio id="expansionValve"><source src="./voiceovers/ExpansionValve.mp3" type="audio/mpeg"></audio>
+                    </div>
+                    <div onclick="Play('indoorCoil')" class="middle-col">
+                        <p class="poster-text-title">Indoor Coil:</p>
+                        <p class="poster-text">This is the coil inside the house. In winter, it functions like a condenser, releasing heat that it collected from the outside to warm the house by changing from a gas to a liquid. In summer, it switches roles to act as an evaporator, collecting heat from inside the home to help cool the indoor air by switching from a liquid to a gas.</p>
+                        <img class="placeholder" src="./images/IndoorCoil.png" alt="Indoor Coil Image">
+                        <audio id="indoorCoil"><source src="./voiceovers/IndoorCoil.mp3" type="audio/mpeg"></audio>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div onclick="Play('stateChange')">
+                    <p class="poster-text-title">State Change and Refrigerant:</p>
+                    <p class="poster-text">Heat pumps use refrigerants, which are special fluids that can quickly absorb or release heat by changing their state of matter (Solid, Liquid, Gas). When the refrigerant changes from liquid to gas, it absorbs a significant amount of heat to make that change; when it shifts from gas to liquid, it releases heat. This phase change allows the heat pump to transfer heat effectively, making it possible to warm or cool your home with little wasted energy, even when outside temperatures are extreme.</p>
+                    <audio id="stateChange"><source src="./voiceovers/StateChange.mp3" type="audio/mpeg"></audio>
+                </div>
+                <div onclick="Play('at5Rivers')">
+                    <p class="poster-text-title">Heat pump at Five Rivers:</p>
+                    <p class="poster-text">Five rivers has a geothermal heat pump. Instead of pulling heat out of the outside air this heat pump pulls heat out of the ground using long pipes that go straight into the ground beneath you. Geothermal heat pumps are even more efficient than air to air heat pumps but are less common due to their higher initial cost. Below there is a graphic showing air to air heat pumps on the left and geothermal heat pumps on the right.</p>
+                    <audio id="at5Rivers"><source src="./voiceovers/HeatPumpAt5Rivers.mp3" type="audio/mpeg"></audio>
+                </div>
+                <img class="placeholder" src="./images/HeatPumpAt5Rivers.png" alt="Heat Pump At 5 Rivers Graphic">
+                <div onclick="Play('drawbacks')">
+                    <p class="poster-text-title">Drawbacks of Heat Pump Technology:</p>
+                    <p class="poster-text">Heat pump technology while excellent and innovative does still have drawbacks. In extreme heat and extreme cold the efficiency of heat pumps drops considerably. While it is possible to pull heat out of cold air or to push heat into warm air it is not much more efficient than traditional Ac units or boiler units. In practice most heat pumps in cold regions such as NY State need both a heat pump and a furnace heater.</p>
+                    <audio id="drawbacks"><source src="./voiceovers/Drawbacks.mp3" type="audio/mpeg"></audio>
+                </div>
+            </div>
+        </div>    
+
+        <div class="audio-walkthrough">
+            <label for="audio">Audio Walkthrough (In English):</label>
+            <label class="switch">
+                <input id="audioOnOff" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+
+    <footer>
+        *FIVE RIVERS COPYWRITE FOOTER INFORMATION*
+    </footer>
+
+</body>
+
+</html>
