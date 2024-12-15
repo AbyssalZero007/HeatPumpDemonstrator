@@ -63,7 +63,7 @@ header h1 {
 
 .info-board {
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -92,7 +92,6 @@ header h1 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     flex-grow: 3;
     text-align: center;
-
     display: flex;
     flex-direction: column;
 }
@@ -223,4 +222,15 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+@media screen and (max-width : 800px) {
+    .info-board {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .col {max-width: 100%;}
+    .poster-text {font-size: 8pt;}
+    .poster-text-title {font-size: 10pt;}
 }
